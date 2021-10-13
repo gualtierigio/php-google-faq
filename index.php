@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-        $faq =
+        $faqs =
             [
                 [
                 'question' => 'Come state implementando la recente decisione della Corte di giustizia
@@ -76,9 +76,15 @@
     <main>
 
         <div>
-            <h1>
-                <?php foreach ($faq as $question); ?>
+            <?php foreach ($faqs as $faq){?>
+
+            <h1 class="domande">
+                <?php echo ($faq['question']); ?>
             </h1>
+            <p :class="risposte">
+                <?php echo ($faq['answer']) ; ?>
+            </p>
+            <?php }; ?>
         </div>
 
     </main>
